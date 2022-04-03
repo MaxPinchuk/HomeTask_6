@@ -1,13 +1,33 @@
 package com.company.task4;
 
+/**
+ * Создать двумерный массив int[][] score. Размер первого уровня – 3, размер второго уровня – 4
+ * Заполнить массив как указано ниже:
+ * [
+ *      [ 10, 11, 12, 13],
+ *      [ 20, 21, 22, 23],
+ *      [ 30, 31, 32, 33],
+ * ]
+ * Создать еще один масив int[] result.
+ * Заполнить этот масив суммами элементов каждой строки из  int[][] score
+ */
+
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        int[][] score = new int[3][4];
+
+        int[][] score = {{10, 11, 12, 13}, {20, 21, 22, 23}, {30, 31, 32, 33}};
+        long[] result = new long[score.length];
+
         for (int i = 0; i < score.length; i++) {
-            for (int j = 0; j < score.length; j++) {
-                score[i][j] = i * 10 + 1;
+            int[] secondArr = score[i];
+            long sum =0;
+            for (int val:secondArr) {
+                sum+=val;
             }
-            System.out.println(i);
+            result[i]=sum;
         }
+        System.out.println(Arrays.toString(result));
     }
 }
