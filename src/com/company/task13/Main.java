@@ -20,9 +20,7 @@ public class Main {
 
         String[] fruits = {"Яблоко", "Груша", "Слива", "Апельсин", "Мандарин"};
 
-        for (int i = 0; i < fruits.length; i++) {
-        }
-        String[] copy = Arrays.copyOf(fruits, 5);
+        String[] copy = Arrays.copyOf(fruits, fruits.length);
 
         for (String food : fruits) {
             System.out.println(food);
